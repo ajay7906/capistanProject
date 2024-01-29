@@ -1,0 +1,93 @@
+
+
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .left-img {
+    position: relative;
+    width: 50%;
+    height: 100vh;
+    background-image: url('../../assets/image 13.png');
+    background-size: cover;
+    background-position: center;
+  }
+  .left-img h3 {
+    position: absolute;
+   
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(173, 46, 46);
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  .right-page {
+    width: 50%;
+    height: 100vh;
+    background-color: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .heading h1{
+    font-family: 'Single Day', cursive;
+    color: #72DB73;
+    font-size: 3rem;
+    font-weight: 100;
+    margin: 0;
+  }
+ .heading p{
+    margin-top: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 2px;
+ }
+ 
+ 
+ .first-details input{
+    width: 400px;
+    height: 35px;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #292929;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: -20px;
+    line-height: 0;
+    
+ }
+ .first-details input::placeholder{
+    padding-left: 20px;
+ }
+ .first-details p{
+    color: red;
+    margin: 0;
+    font-size: .8rem;
+    font-family: 'DM Sans', sans-serif;
+    padding-top: 10px;
+ }
+  label{
+    color: #7C7C7C;
+    text-align: left;
+ }
+ .condition{
+    width: 400px;
+    text-align: left;
+ }
+ .condition p{
+   color:  #7C7C7C;
+   font-size: .8rem;
+   
+   font-family: 'DM Sans', sans-serif;
+ }
+ .condition span{
+    color: #72DB73;
+    cursor: pointer;
+ }

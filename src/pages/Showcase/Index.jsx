@@ -1,9 +1,9 @@
 
 
-function Index() {
+function ShoCase() {
   return (
-    <div>Index</div>
+    <div>ShoCase</div>
   )
 }
 
-export default Index
+export default ShoCase

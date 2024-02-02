@@ -2,4 +2,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;1,9..40,100;1,9..40,300;1,9..40,400&display=swap');
 *{
     box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
 }

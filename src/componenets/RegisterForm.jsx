@@ -84,7 +84,7 @@ export default function RegisterForm() {
       </div>
       <div className="right-page">
         <div className="heading">
-          <h1>Super App</h1>
+          <h2>Super App</h2>
           <p>Create your new account</p>
         </div>
         <div className="input-field">

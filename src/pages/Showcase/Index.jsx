@@ -39,7 +39,7 @@ function ShoCase() {
       style={{
         display:'flex',
         flexDirection:'column',
-        gap:'100px'
+        gap:'25px'
       }} 
       >
         <div className="left-upper" style={{

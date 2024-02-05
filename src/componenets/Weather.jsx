@@ -8,9 +8,10 @@ const Weather = ({ weather, setWeather, error, setError, loading, setLoading }) 
       style={{
         width: '30vw',
         height: '20vh',
-        backgroundColor: 'red',
+        backgroundColor: '#101744',
         borderRadius: '20px',
-        marginTop: '25px'
+        marginTop: '25px',
+        color:'#fff'
 
       }}
     >

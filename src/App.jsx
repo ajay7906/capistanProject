@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import './App.css'
 import Info from "./pages/Info";
-import Showcase from "./pages/Showcase";
+import Showcase from "./pages/Showcase/Index";
 import Movies from "./pages/Movies";
 import RegisterForm from "./componenets/RegisterForm";
 function App() {

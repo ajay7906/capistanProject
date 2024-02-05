@@ -109,108 +109,113 @@ function Timer() {
     }
   };
   return (
-    <div
-      style={{
-        background: '#1E2343',
-        width: '58vw',
-        height: '23vh',
-        borderRadius: '20px'
-      }}
-    >
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: '1fr 2fr ',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '100%',
-        padding: '12px 20px 20px 30px',
-        gap: '30px',
-        color: 'white'
-      }}>
+    <>
+      <div
+        style={{
+          background: '#1E2343',
+          width: '58vw',
+          height: '23vh',
+          borderRadius: '20px'
+        }}
+      >
         <div style={{
-          width: '57%', height: '100%', borderRadius: '100%', background: '#191E39',
-          padding: '10px', boxShadow: 'inset 0 0 10px rgba(0, 0, 0, 0.5);'
-        }}  >
-          {
-            <CountdownCircleTimer
-              key={countdownKey}
-              ref={countdownRef}
-              isPlaying={isRunning}
-              duration={countdownDuration}
-
-              size={115}
-              colors={['#004777', '#F7B801', '#A30000', '#A30000']}
-              colorsTime={[7, 5, 2, 0]}
-              strokeWidth={6}
-            >
-              {({ remainingTime }) => {
-                const hours = Math.floor(remainingTime / 3600)
-                const minutes = Math.floor((remainingTime % 3600) / 60)
-                const seconds = remainingTime % 60
-
-                return `${hours}:${minutes}:${seconds}`
-              }}
-            </CountdownCircleTimer>
-
-          }
-
-
-        </div>
-        <div style={{
-
-
+          display: 'grid',
+          gridTemplateColumns: '1fr 2fr ',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: '100%',
+          padding: '12px 20px 20px 30px',
+          gap: '30px',
+          color: 'white'
         }}>
-          <div className="mints" style={{ display: 'flex', marginTop: '-18px', gap: '130px' }}>
-            <p>Hours</p>
-            <p>Minutes</p>
-            <p>Second</p>
+          <div style={{
+            width: '57%', height: '100%', borderRadius: '100%', background: '#191E39',
+            padding: '10px', boxShadow: 'inset 0 0 10px rgba(0, 0, 0, 0.5);'
+          }}  >
+            {
+              <CountdownCircleTimer
+                key={countdownKey}
+                ref={countdownRef}
+                isPlaying={isRunning}
+                duration={countdownDuration}
+
+                size={115}
+                colors={['#004777', '#F7B801', '#A30000', '#A30000']}
+                colorsTime={[7, 5, 2, 0]}
+                strokeWidth={6}
+              >
+                {({ remainingTime }) => {
+                  const hours = Math.floor(remainingTime / 3600)
+                  const minutes = Math.floor((remainingTime % 3600) / 60)
+                  const seconds = remainingTime % 60
+
+                  return `${hours}:${minutes}:${seconds}`
+                }}
+              </CountdownCircleTimer>
+
+            }
+
 
           </div>
-          <div className="timer-min" style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr'
+          <div style={{
+
+
           }}>
-            <div className="hours" style={{ marginTop: '-10px' }}>
-              <img src={Increament} width={20} alt="" onClick={() => handleIncrement('hours')} />
-              <p style={{ marginTop: '-3px', marginBottom: '-3px', marginLeft: '-4px', fontSize: '23px' }}>{String(time.hours).padStart(2, '0')}</p>
-              <img src={Decreament} width={20} alt="" onClick={() => handleDecrement('hours')} />
+            <div className="mints" style={{ display: 'flex', marginTop: '-18px', gap: '130px' }}>
+              <p>Hours</p>
+              <p>Minutes</p>
+              <p>Second</p>
+
             </div>
-            <div>
-              <p>:</p>
-            </div>
-            <div className="min" style={{ marginTop: '-10px' }}>
-              <img src={Increament} width={20} alt="" onClick={() => handleIncrement('minutes')} />
-              <p style={{ marginTop: '-3px', marginBottom: '-3px', marginLeft: '-4px', fontSize: '23px' }}>{String(time.minutes).padStart(2, '0')}</p>
-              <img src={Decreament} width={20} alt="" onClick={() => handleDecrement('minutes')} />
-            </div>
-            <div>
-              <p>:</p>
-            </div>
-            <div className="sec" style={{ marginTop: '-10px' }}>
-              <img src={Increament} width={20} alt="" onClick={() => handleIncrement('seconds')} />
-              <p style={{ marginTop: '-3px', marginBottom: '-3px', marginLeft: '-4px', fontSize: '23px' }}>{String(time.seconds).padStart(2, '0')}</p>
-              <img src={Decreament} width={20} alt="" onClick={() => handleDecrement('seconds')} />
-            </div>
+            <div className="timer-min" style={{
+              display: 'grid',
+              gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr'
+            }}>
+              <div className="hours" style={{ marginTop: '-10px' }}>
+                <img src={Increament} width={20} alt="" onClick={() => handleIncrement('hours')} />
+                <p style={{ marginTop: '-3px', marginBottom: '-3px', marginLeft: '-4px', fontSize: '23px' }}>{String(time.hours).padStart(2, '0')}</p>
+                <img src={Decreament} width={20} alt="" onClick={() => handleDecrement('hours')} />
+              </div>
+              <div>
+                <p>:</p>
+              </div>
+              <div className="min" style={{ marginTop: '-10px' }}>
+                <img src={Increament} width={20} alt="" onClick={() => handleIncrement('minutes')} />
+                <p style={{ marginTop: '-3px', marginBottom: '-3px', marginLeft: '-4px', fontSize: '23px' }}>{String(time.minutes).padStart(2, '0')}</p>
+                <img src={Decreament} width={20} alt="" onClick={() => handleDecrement('minutes')} />
+              </div>
+              <div>
+                <p>:</p>
+              </div>
+              <div className="sec" style={{ marginTop: '-10px' }}>
+                <img src={Increament} width={20} alt="" onClick={() => handleIncrement('seconds')} />
+                <p style={{ marginTop: '-3px', marginBottom: '-3px', marginLeft: '-4px', fontSize: '23px' }}>{String(time.seconds).padStart(2, '0')}</p>
+                <img src={Decreament} width={20} alt="" onClick={() => handleDecrement('seconds')} />
+              </div>
 
 
-          </div>
-          <div className="button">
-            <button style={{
-              background: '#FF6A6A', width: '90%',
-              border: 'none',
-              height: '25px',
-              marginTop: '10px',
-              color: '#fff',
-              fontFamily: "'DM Sans', sans-serif",
-              borderRadius: '20px',
+            </div>
+            <div className="button">
+              <button style={{
+                background: '#FF6A6A', width: '90%',
+                border: 'none',
+                height: '25px',
+                marginTop: '10px',
+                color: '#fff',
+                fontFamily: "'DM Sans', sans-serif",
+                borderRadius: '20px',
 
 
-            }} onClick={handleStartPause} >{isRunning ? 'Pause' : 'Start'}</button>
+              }} onClick={handleStartPause} >{isRunning ? 'Pause' : 'Start'}</button>
+            </div>
           </div>
         </div>
-      </div>
 
-    </div>
+
+      </div>
+      
+    </>
+
   )
 }
 

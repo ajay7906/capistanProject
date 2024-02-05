@@ -2,7 +2,7 @@
 
 function Index() {
   return (
-    <div>Index</div>
+    <div>TJHkfkdfhh</div>
   )
 }
 

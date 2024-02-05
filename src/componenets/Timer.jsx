@@ -5,8 +5,8 @@ import Increament from '../assets/up.png';
 import Decreament from '../assets/down.png'
 import { useEffect, useRef, useState } from 'react';
 function Timer() {
- 
-  
+
+
   const [isRunning, setIsRunning] = useState(false);
   const [time, setTime] = useState({ hours: 0, minutes: 0, seconds: 0 });
   const [countdownDuration, setCountdownDuration] = useState(0);
@@ -42,17 +42,18 @@ function Timer() {
           } else {
             updatedTime.seconds -= 1;
           }
-          const totalSeconds = updatedTime.hours * 3600 + updatedTime.minutes * 60 + updatedTime.seconds;
-          setCountdownKey((prevKey) => prevKey + 1);
-          setCountdownDuration(totalSeconds);
 
+          let totalSeconds = updatedTime.hours * 3600 + updatedTime.minutes * 60 + updatedTime.seconds;
+          setCountdownKey((prevKey) => prevKey + 1);
+
+          setCountdownDuration(totalSeconds);
           return updatedTime;
         });
       }, 1000);
     }
 
     return () => clearInterval(interval);
-  }, [isRunning]);
+  }, [isRunning, countdownDuration]);
 
   const handleIncrement = (unit) => {
     setTime((prevTime) => {
@@ -129,19 +130,26 @@ function Timer() {
         <div style={{
           width: '57%', height: '100%', borderRadius: '100%', background: '#191E39',
           padding: '10px', boxShadow: 'inset 0 0 10px rgba(0, 0, 0, 0.5);'
-        }}>
+        }}  >
           {
             <CountdownCircleTimer
               key={countdownKey}
               ref={countdownRef}
               isPlaying={isRunning}
               duration={countdownDuration}
+
               size={115}
               colors={['#004777', '#F7B801', '#A30000', '#A30000']}
               colorsTime={[7, 5, 2, 0]}
               strokeWidth={6}
             >
-              {({ remainingTime }) => remainingTime}
+              {({ remainingTime }) => {
+                const hours = Math.floor(remainingTime / 3600)
+                const minutes = Math.floor((remainingTime % 3600) / 60)
+                const seconds = remainingTime % 60
+
+                return `${hours}:${minutes}:${seconds}`
+              }}
             </CountdownCircleTimer>
 
           }
@@ -206,7 +214,7 @@ function Timer() {
   )
 }
 
-export default Timer 
+export default Timer
 
 
 

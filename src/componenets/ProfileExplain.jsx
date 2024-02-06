@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-
+import Image from '../assets/mount.png'
 import getNews from '../api/News';
 
 function ProfileExplain() {
@@ -36,7 +36,7 @@ function ProfileExplain() {
     return (
         <div>
             <div className="right-profile-up" style={{
-                backgroundImage: `url(${currentNews.urlToImage})`,
+                backgroundImage: `url(${currentNews?.urlToImage})`,
                 width: '100%',
                 height: '50vh',
                 borderRadius: '20px ',

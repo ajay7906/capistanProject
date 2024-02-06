@@ -134,10 +134,10 @@ function Timer() {
           }}  >
             {
               <CountdownCircleTimer
-                key={countdownKey}
+              key={countdownKey}
                 ref={countdownRef}
                 isPlaying={isRunning}
-                duration={countdownDuration}
+                duration={time.hours*3600 + time.minutes*60 + time.seconds}
 
                 size={115}
                 colors={['#004777', '#F7B801', '#A30000', '#A30000']}

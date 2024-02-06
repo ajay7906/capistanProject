@@ -76,15 +76,7 @@ function ShoCase() {
       </div>
       <div className="right-profile" style={{ background: '#fff', width: '28vw', height: '87vh', borderRadius: '20px ', }}>
         <ProfileExplain />
-        <div className="right-profile-down" style={{ padding: '0px 15px 15px 15px', fontSize: '14px', textAlign: 'left' }}>
-          <p>In the years since human beings first reached the summit of Mount Everest in 1953,
-            climbing the world’s highest mountain has changed dramatically. Today, hundreds of
-            mountaineers manage the feat each year thanks to improvements in knowledge,
-            technology, and the significant infrastructure provided by commercially guided
-            expeditions that provide a veritable highway up
-            the mountain for those willing to accept both the......</p>
-
-        </div>
+        
       </div>
       <button style={{
         position: 'absolute',
